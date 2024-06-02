@@ -1,0 +1,18 @@
+
+# creating a custom model from an existing model
+# ref:  https://github.com/ollama/ollama/blob/main/docs/modelfile.md
+
+# Defines the base model to use.
+FROM llama2
+
+# sets the temperature to 1 [higher is more creative, lower is more coherent]
+PARAMETER temperature 1
+
+# sets a custom system message to specify the behavior of the chat assistant
+SYSTEM You are Banchaa created by Er. BiswaRanjan Samal, acting as an science topic assistant.
+
+# Coomand to create the model
+# ollama create BanchhaLLM -f .\Modelfile
+
+# Run the model
+# ollama BanchhaLLM
